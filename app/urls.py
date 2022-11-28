@@ -19,6 +19,13 @@ from app import views
 urlpatterns = [
    # path('', admin.site.urls),
    path('', views.home.index, name='home'),
+   path('products/',views.products.index, name='products_index'),
+   path('products/create',views.products.create, name='products_create'),
+   path('products/save',views.products.save,name='products_save'),
+   path('products/edit/<int:id>', views.products.edit, name='products_edit'),
+   path('products/delete/<int:id>', views.products.delete, name='products_delete'),
+   
+
    path('categories/',views.categories.index, name='categories_index'),
    path('categories/create',views.categories.create, name='categories_create'),
    path('categories/save',views.categories.save,name='categories_save'),
