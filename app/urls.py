@@ -16,14 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
-<<<<<<< HEAD
 urlpatterns = [
    # path('', admin.site.urls),
-   path('', views.home.index, name='home')
-=======
-
-urlpatterns = [
-    # path('admin/', admin.site.urls),
-    path('', views.home.index, name='home')
->>>>>>> feature/templating
+   path('', views.home.index, name='home'),
+   path('categories/',views.categories.index, name='categories_index'),
+   path('categories/create',views.categories.create, name='categories_create'),
+   path('categories/save',views.categories.save,name='categories_save'),
+   path('categories/edit/<int:id>', views.categories.edit, name='categories_edit'),
+   path('categories/delete/<int:id>', views.categories.delete, name='categories_delete'),
+   
 ]
