@@ -16,14 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
-<<<<<<< HEAD
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.home.index, name='home')
-=======
-urlpatterns = [
-   # path('', admin.site.urls),
-   path('', views.home.index, name='home')
->>>>>>> feature/data-modeling
 ]

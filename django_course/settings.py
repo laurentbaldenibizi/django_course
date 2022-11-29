@@ -81,11 +81,7 @@ DATABASES = {
         'HOST':'localhost',
         'USER':'root',
         'PASSWORD':'',
-<<<<<<< HEAD
         'PORT':'3306'
-=======
-        'PORT':'3306',
->>>>>>> feature/data-modeling
     }
 }
 
