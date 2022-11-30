@@ -1,0 +1,34 @@
+{% extends 'app/layouts/default.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<!-- Begin Page content-->
+<div class="Container-fluid">
+    <!-- Page Heading-->
+    <h1 class="h3 mb-2 text gray-800"> Orders</h1>
+    <!-- DataTales Example-->
+    <div class="Card shodow mb-4">
+        <h6 class="m-0 font-weight-bold text-primary">New Order</h6>
+    </div>
+    <div class="Card-body">
+        <div class="Container">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.customer|as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ form.product|as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ form.qty|as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ form.total|as_crispy_field }}
+                </div>
+                <button type="submit" class="btn btn-primary"> Enregistrer</Button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end content-->
+{% endblock %}
