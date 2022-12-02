@@ -43,7 +43,7 @@
                         {% for ord in Orders %}
                         <tr>
                             <td>{{ord.id}}</td>
-                            <td>{{ ord.customer.first_name}}</td>
+                            <td>{{ ord.customer.first_name}}{{" "}}{{ ord.customer.last_name}}</td>
                             <td>{{ ord.product.category.category_name}}</td>
                             <td>{{ ord.product.product_name}}</td>
                             <td>{{ ord.product.unit_price}}</td>
